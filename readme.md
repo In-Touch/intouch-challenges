@@ -18,6 +18,6 @@ Fork this repository and read the instruction text files in each challenge folde
 
 If you need to include 3rd-party vendor libraries, please make sure you include both a `composer.json` and `composer.lock` so we're working off the same versions as you were.
 
-No custom PHP extensions should be used - i.e., no extension that can't be installed via `apt-get` on a plain-jane Ubuntu 14.04 virtual machine using the default Ubuntun repositories.  *If* a custom extension is required, please add a `readme.md` file in the challenge folder explaining which extensions to install and why they were required to complete the challenge ("because it's faster" is an OK answer if you include a benchmark script to prove it!).
+No custom PHP extensions should be used - i.e., no extension that can't be installed via `apt-get` on a plain-jane Ubuntu 14.04 virtual machine using the default Ubuntun repositories.  *If* an extension is required, please add a `readme.md` file in the challenge folder explaining which extensions to install and why they were required to complete the challenge ("because it's faster" is an OK answer if you include a benchmark script to prove it!).
 
 ### Have fun and good luck!
