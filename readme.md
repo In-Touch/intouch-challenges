@@ -2,14 +2,7 @@
 
 These programming challenges are used as a portion of the technical interview process at [In-Touch Insight Systems Inc.](http://www.intouchinsight.com)
 
-The challenges are designed to test several aspects of a developer candidate:
-
-* PHP Skill
-* Critical Thinking
-* Creativity
-* Problem Solving
-
-**Note:** There are no *trick* questions, however there are some ways to go *above and beyond* the strict requirements of the question that can speak to the aspects above.
+**Note:** There are no *trick* questions, however there are some ways to go *above and beyond* the strict requirements of the question that can speak to the creativity of the candidate.
 
 ## How to participate
 
