@@ -10,10 +10,10 @@ The details you'll need are as follows:
 * The first byte of the key is `0xBA`
 * The decrypted text is a plain ASCII string in English
 
-### Initialization Vector (base64 encoded)
+### Initialization Vector
 
 	wfQWvRpD/bjkdLBQVCFyGg==
 
-### Ciphertext (base64 encoded)
+### Ciphertext
 
 	U45PXdltSdze1oC9OhxWtYybClZeNLd/MZ1LsC+CRTc=
