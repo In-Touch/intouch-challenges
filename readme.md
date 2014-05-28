@@ -1,4 +1,4 @@
-# In-Touch Insight Programming Challenges
+# In-Touch PHP Challenges
 
 These programming challenges are used as a portion of the technical interview process at [In-Touch Insight Systems Inc.](http://www.intouchinsight.com)
 
@@ -21,7 +21,7 @@ Fork this repository, read the instructions text files in each challenge folder.
 * Submissions must run under PHP 5.5+
 * Use an object-oriented structure as opposed to functional
 * The "blank" PHP file in each challenge folder should be the answer entry-point
-** i.e., we can run `php challenge1.php` from the `Challenge 1` folder to test your answer
+	* i.e., we can run `php challenge1.php` from the `Challenge 1` folder to test your answer
 
 If you need to include 3rd-party vendor libraries, please make sure you include both a `composer.json` and `composer.lock` so we're working off the same versions as you were.
 
