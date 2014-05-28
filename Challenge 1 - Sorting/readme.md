@@ -1,5 +1,4 @@
-In-Touch Programming Challenge #1 - Sorting
-===========================================
+## In-Touch Programming Challenge #1 - Sorting
 
 Generate a list of 100 random integers between 1 and 99.
 
