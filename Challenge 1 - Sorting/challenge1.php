@@ -2,7 +2,7 @@
 <html>
   <head>
     <link type='text/css' rel='stylesheet' href='style.css'/>
-    <title>PHP!</title>
+    <title>In-Touch Programming Challenge #1 - Sorting</title>
   </head>
   <body>
 
