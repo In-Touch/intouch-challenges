@@ -2,7 +2,7 @@
 <html>
   <head>
     <link type='text/css' rel='stylesheet' href='style.css'/>
-    <title>PHP!</title>
+    <title>In-Touch Programming Challenge #3 - Cryptography</title>
   </head>
   <body>
 
@@ -26,6 +26,7 @@
 	
 <?php
 echo "<h1>Response - work in progress</h1>";
+// start of value definitions
 echo "<br />";
 echo "IV:";
 echo "<br />";
@@ -41,6 +42,17 @@ $ct = 'U45PXdltSdze1oC9OhxWtYybClZeNLd/MZ1LsC+CRTc=';
 echo $ct;
 echo "<br />base64_decode:<br />";
 echo base64_decode($ct);
+
+// start of decrypt function
+// function decrypt($text, $pkey)
+// {
+//	$key = $pkey;   
+//	$text = base64_decode($text); 
+//	$IV = substr($text, strrpos($text, "-[--IV-[-") + 9);
+//	$text = str_replace("-[--IV-[-".$IV, "", $text);
+// 
+//	return rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, $text, MCRYPT_MODE_CBC, $IV), "\0");
+//}
 
 
 
