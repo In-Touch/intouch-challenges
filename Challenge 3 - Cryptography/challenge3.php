@@ -59,7 +59,7 @@ class Solution {
 			{
 				return $output = array(
 					'Output' => rtrim($string,"\0\4"),
-					'Pass' => bin2hex($key)
+					'Key' => bin2hex($key)
 				);
 				break;
 			}
