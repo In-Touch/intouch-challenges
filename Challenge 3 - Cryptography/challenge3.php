@@ -27,9 +27,10 @@ class Solution {
 				$this->mode = MCRYPT_MODE_CBC;
 				$this->cipher = MCRYPT_RIJNDAEL_128;
 				break;
+			//...
 		}
 
-		$this->used = array();
+		$this->failed = array();
 		$this->base_key = [chr(0xBA)];
 		$this->iv = base64_decode($iv);
 	}
@@ -42,43 +43,39 @@ class Solution {
 	function random_attack_pair() {
 
 		$attack = [chr(rand(0,255)), chr(rand(0,255))];
-		return $this->used_check($attack) ? $attack : $this->random_attack_pair();
+		return $this->failed_check($attack) ? $attack : $this->random_attack_pair();
 	}
 
 	function brute_force( $secrets ) {
 
 		$c = 0;
 
-		while( $c < 1 /*(256*256) */ )
+		while( true )
 		{
 			$attack = $this->random_attack_pair();
 			$key = $this->generate_key( array_merge($this->base_key, $attack) );
 
-			if( ($string = mcrypt_decrypt($this->cipher, $key, $secrets, $this->mode, $this->iv)) && preg_match('/^\x00-\x7F/',$string) )
+			if( ($string = mcrypt_decrypt($this->cipher, $key, base64_decode($secrets), $this->mode, $this->iv)) && mb_detect_encoding($string, 'ASCII', true) )
 			{
-				$this->used_record( $attack ); //not so much failed as 'used';
-				$output = array(
+				return $output = array(
 					'Output' => rtrim($string,"\0\4"),
-					'Pass' => $attack
+					'Pass' => bin2hex($key)
 				);
-				RGK::tell( $string.'<br />' );
-				//break;
-				++$c;
+				break;
 			}
 			else
 			{
-				$this->used_record( $attack );
+				$this->failed_record( $attack );
 			}
 		}
-		return false;
 	}
 
-	function used_check( $attack ) {
-		return !isset( $this->used[implode($attack)] );
+	function failed_check( $attack ) {
+		return !isset( $this->failed[implode($attack)] );
 	}
 
-	function used_record( $attack ) {
-		$this->used[implode($attack)] = true;
+	function failed_record( $attack ) {
+		$this->failed[implode($attack)] = true;
 	}
 
 }
