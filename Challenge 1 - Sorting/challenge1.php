@@ -40,7 +40,7 @@ class Solution {
 			unset( $this->list[$k] );
 		}
 
-		return $this->sorted;
+		return implode( ", ", $this->sorted );
 	}
 
 	function sort() {
